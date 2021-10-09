@@ -13,14 +13,14 @@ public class Main {
     public static int getMatrixOrder() {
         int matrixOrder = 0;
         String path = "E:\\ОАиП\\ЛР2\\Java\\LR2.3\\InputData.txt";
-        BufferedReader reader = null;
+        BufferedReader reader;
         try {
             reader = new BufferedReader(new FileReader(path));
             matrixOrder = Integer.parseInt(reader.readLine());
         } catch (FileNotFoundException e) {
             System.err.println("Input file is not found");
         } catch (IOException e) {
-            e.getMessage();
+            System.err.println(e.getMessage());
         } catch (NumberFormatException e) {
             System.err.println("There's not a number in file");
         }
